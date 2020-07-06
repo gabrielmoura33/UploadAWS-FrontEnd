@@ -15,7 +15,7 @@ function Upload({ onUpload }) {
     return <UploadMessage type="sucess">Solte os arquivos aqui</UploadMessage>
   }
   return (
-      <Dropzone accept="image/*" onDropAccepted={onUpload} >
+      <Dropzone accept={["image/*", "video/*"]} onDropAccepted={onUpload} >
         {({getRootProps, getInputProps, isDragActive, isDragReject}) => (
           <DropContainer 
             {...getRootProps()}
